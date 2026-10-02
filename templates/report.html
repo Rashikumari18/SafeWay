@@ -1,0 +1,5 @@
+{% extends "base.html" %}{% block title %}SafeWay | Report{% endblock %}{% block content %}
+<section class="page-head"><div><span class="eyebrow">COMMUNITY SIGNAL</span><h1>Report an incident.</h1><p>Add a report to the local prototype dataset.</p></div></section>
+<section class="form-shell"><form method="post"><div class="two"><label>Area<input name="area" placeholder="e.g. Central Market" required></label><label>Incident type<select name="incident_type" required><option value="">Choose one</option><option>Poor lighting</option><option>Harassment</option><option>Suspicious activity</option><option>Theft</option><option>Traffic</option><option>Other</option></select></label></div>
+<div class="two"><label>Date<input type="date" name="incident_date" required></label><label>Time<input type="time" name="incident_time" required></label></div><label>Description<textarea name="description" rows="5" placeholder="Briefly describe the report..."></textarea></label><button class="btn primary" type="submit">Submit report</button></form></section>
+{% endblock %}

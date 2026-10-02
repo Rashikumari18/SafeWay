@@ -1,0 +1,12 @@
+{% extends "base.html" %}{% block title %}SafeWay | Smarter journeys{% endblock %}{% block content %}
+<section class="hero">
+<div class="hero-copy"><span class="eyebrow">SMART JOURNEY COMPANION</span><h1>Know your route.<br><em>Travel smarter.</em></h1>
+<p>SafeWay combines area reports, route comparison, safety signals and journey check-ins in one clean planning space.</p>
+<div class="hero-actions"><a class="btn primary" href="{{ url_for('routes') }}">Plan a journey →</a><a class="btn ghost" href="{{ url_for('dashboard') }}">Explore insights</a></div>
+<div class="mini-trust"><span>●</span> Interactive map <span>•</span> Route analysis <span>•</span> Journey check-in</div></div>
+<div class="hero-visual"><div class="radar"><div class="radar-ring r1"></div><div class="radar-ring r2"></div><div class="radar-ring r3"></div><div class="radar-dot d1"></div><div class="radar-dot d2"></div><div class="radar-dot d3"></div><div class="radar-center">SW</div></div>
+<div class="floating-card top"><span class="dot green"></span><div><small>ROUTE STATUS</small><b>Ready to scan</b></div></div>
+<div class="floating-card bottom"><small>SAFETY SIGNAL</small><strong>INCIDENT AWARE</strong><span>Area-level insights</span></div></div></section>
+<section class="feature-strip"><div><b>01</b><h3>Choose locations</h3><p>Use map points, saved places or area names.</p></div><div><b>02</b><h3>Analyze routes</h3><p>Compare reports, scores and night signals.</p></div><div><b>03</b><h3>Check in</h3><p>Start and finish a journey status with a trusted contact.</p></div><div><b>04</b><h3>Understand trends</h3><p>Explore incident mix and time patterns.</p></div></section>
+<section class="cta"><div><span class="eyebrow">SAFEWAY</span><h2>Plan. Analyze. Check in.</h2></div><a class="btn primary" href="{{ url_for('routes') }}">Open Journey Planner</a></section>
+{% endblock %}

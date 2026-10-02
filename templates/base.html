@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{% block title %}SafeWay{% endblock %}</title>
+<link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head><body>
+<header class="nav"><a class="brand" href="{{ url_for('index') }}"><span class="brand-mark">✦</span> SafeWay</a>
+<nav><a href="{{ url_for('index') }}">Home</a><a href="{{ url_for('routes') }}">Journey Planner</a><a href="{{ url_for('report') }}">Report</a><a href="{{ url_for('dashboard') }}">Insights</a>
+{% if user %}<a href="{{ url_for('profile') }}">Profile</a><a class="nav-logout" href="{{ url_for('logout') }}">Logout</a>{% else %}<a class="nav-login" href="{{ url_for('login') }}">Login</a>{% endif %}</nav></header>
+{% with messages=get_flashed_messages(with_categories=true) %}{% if messages %}<div class="flash-wrap">{% for category,msg in messages %}<div class="flash {{ category }}">{{ msg }}</div>{% endfor %}</div>{% endif %}{% endwith %}
+<main>{% block content %}{% endblock %}</main>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="{{ url_for('static',filename='js/script.js') }}"></script>
+</body></html>

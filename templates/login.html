@@ -1,0 +1,5 @@
+{% extends "base.html" %}{% block title %}SafeWay | Account{% endblock %}{% block content %}
+<section class="auth"><div class="auth-art"><span class="brand-mark">✦</span><h1>Welcome to SafeWay.</h1><p>A focused space for smarter route planning.</p></div><div class="auth-form"><span class="eyebrow">{{ "CREATE ACCOUNT" if mode=="signup" else "WELCOME BACK" }}</span><h2>{{ "Start your journey" if mode=="signup" else "Sign in" }}</h2>
+<form method="post">{% if mode=="signup" %}<label>Name<input name="name" required></label>{% endif %}<label>Email<input type="email" name="email" required></label><label>Password<input type="password" name="password" required></label><button class="btn primary full" type="submit">{{ "Create account" if mode=="signup" else "Sign in" }}</button></form>
+<a class="switch" href="{{ url_for('login') if mode=='signup' else url_for('signup') }}">{{ "Already have an account? Sign in" if mode=="signup" else "New here? Create an account" }}</a></div></section>
+{% endblock %}
