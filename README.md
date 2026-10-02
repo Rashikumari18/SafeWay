@@ -201,16 +201,15 @@ SafeWay/
     │
     └── js/
         └── script.js
+
+
 Privacy and Safety Note
 
 SafeWay is designed as a prototype safety analysis system. It does not guarantee real-world safety and should not be treated as a replacement for verified emergency services.
-
 The current journey check-in and SOS workflows are demonstrations of how such features could work in a larger production system.
-
 Users should always rely on trusted local information and appropriate emergency services when necessary.
 
 Project By
-
 Rashi Kumari
 
 GitHub:
