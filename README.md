@@ -162,15 +162,20 @@ cd SafeWay
 py -m venv .venv
 3. Activate the virtual environment
 
+
 For Windows PowerShell:
 
 .\.venv\Scripts\Activate.ps1
+
 4. Install dependencies
 pip install -r requirements.txt
-5. Run the application
+
+6. Run the application
 python app.py
-6. Open in browser
+
+7. Open in browser
 http://127.0.0.1:5000
+
 Project Structure
 SafeWay/
 │
